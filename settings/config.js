@@ -1,0 +1,145 @@
+
+const defaultSettings = {
+  TOKEN: process.env.TOKEN || "",
+  PREFIX: process.env.PREFIX || "1",
+  MONGO_URL: process.env.MONGO_URL || "mongodb+srv://abdogfx961:eRoiqGKfRVqRRSbT@tangify.k2z0x.mongodb.net",
+  Owners: ["1205174578641502208"],
+  geniusToken: "-60bmyz7OVCaTGS63BXCzKXrqVrscGiYWey6HwP260h-S6ImGfqmxAuqiLuoqg83",
+  Dev : "q.u.e.e ,Queen Rose".replace(",", "\n"),
+};
+
+const embedSettings = {
+  color: "#c26400",
+  wrongcolor: "#b50b0b",
+  pannelIMG: "https://i.ibb.co/BKj7SSKN/File-Name-Lost-486.jpg",
+  mainIMG: "https://i.ibb.co/BKj7SSKN/File-Name-Lost-486.jpg",
+
+};
+
+const emojiSettings = {
+  artist:"<:muzio_disk:1347913224774881330>",
+  autoplay: "<:muzio_enabled:1348199678960734218>",
+  back: "<:back7:1347913139999604787>",
+  skip: "<:music_next:1347913138326208565>",
+  forward: "<:fastforword:1348206660090597446>",
+  rewind: "<:rewind:1348206662250528788>",
+  favorite: "<:premium:1347913146899366009> ",
+  filter: "<:muzio_level:1347913244760604742>",
+  lyrics: "<:muzio_staff:1348205293707853866>",
+  play: "<:muzio_playpause:1348199680881721344>",
+  pause: "<:muzio_pause:1348199675009957999>",
+  repeat: "<:muzio_title:1347913241459953776>",
+  shuffle: "<:muzio_queue:1348205205615022090>",
+  stop: "<:muzio_cross:1348212370354343936>",
+  volumedown: "<:volume_down:1347913142323118110>",
+  volumeup: "<:Volume_up:1347913144382787716>",
+  musicTrack: "<:premium:1347913146899366009> ",
+  songrepet: "<:premium:1347913146899366009> ",
+  queuerepet: "<:premium:1347913146899366009> ",
+  maintenance: "<:premium:1347913146899366009> ",
+  search: "<:muzio_search:1347913231284441118>",
+  arrow: "<:premium:1347913146899366009> ",
+  leftarrow: "<:rewind:1348206662250528788>",
+  rightarrow: "<:fastforword:1348206660090597446>",
+  singilrightarrow :"<:rewind:1348206662250528788>",
+  singilleftarrow :"<:fastforword:1348206660090597446>",
+  ERROR: "❌",
+  SUCCESS: "✅",
+  disabled: "🔴",
+  enabled: "🟢",
+  cleared: "🧹",
+  time: "⏲️",
+  ping: "🏓",
+  bot: "🤖",
+};
+
+const filters = {
+  clear: "dynaudnorm=f=200",
+  lightbass: "bass=g=8,dynaudnorm=f=200",
+  heavybass: "bass=g=20,dynaudnorm=f=200",
+  bassboost: "bass=g=8,dynaudnorm=f=200",
+  custombassboost: "bass=g=1,dynaudnorm=f=200",
+  customspeed: "atempo=1.0",
+  purebass: "bass=g=20,dynaudnorm=f=200,asubboost",
+  "8d": "apulsator=hz=0.08",
+  vaporwave: "aresample=48000,asetrate=48000*0.8",
+  nightcore: "aresample=48000,asetrate=48000*1.25",
+  phaser: "aphaser=in_gain=0.4",
+  tremolo: "tremolo",
+  vibrato: "vibrato=f=6.5",
+  reverse: "areverse",
+  treble: "treble=g=5",
+  surrounding: "surround",
+  pulsator: "apulsator=hz=1",
+  subboost: "asubboost",
+  karaoke: "stereotools=mlev=0.03",
+  flanger: "flanger",
+  gate: "agate",
+  haas: "haas",
+  mcompand: "mcompand",
+  earrape: "bass=g=50",
+  bassboost1: "bass=g=1,dynaudnorm=f=200",
+  bassboost2: "bass=g=2,dynaudnorm=f=200",
+  bassboost3: "bass=g=3,dynaudnorm=f=200",
+  bassboost4: "bass=g=4,dynaudnorm=f=200",
+  bassboost5: "bass=g=5,dynaudnorm=f=200",
+  bassboost6: "bass=g=6,dynaudnorm=f=200",
+  bassboost7: "bass=g=7,dynaudnorm=f=200",
+  bassboost8: "bass=g=8,dynaudnorm=f=200",
+  bassboost9: "bass=g=9,dynaudnorm=f=200",
+  bassboost10: "bass=g=10,dynaudnorm=f=200",
+  bassboost11: "bass=g=11,dynaudnorm=f=200",
+  bassboost12: "bass=g=12,dynaudnorm=f=200",
+  bassboost13: "bass=g=13,dynaudnorm=f=200",
+  bassboost14: "bass=g=17,dynaudnorm=f=200",
+  bassboost15: "bass=g=15,dynaudnorm=f=200",
+  bassboost16: "bass=g=16,dynaudnorm=f=200",
+  bassboost17: "bass=g=17,dynaudnorm=f=200",
+  bassboost18: "bass=g=18,dynaudnorm=f=200",
+  bassboost19: "bass=g=19,dynaudnorm=f=200",
+  bassboost20: "bass=g=20,dynaudnorm=f=200",
+};
+
+const links = {
+  inviteURL: `https://discord.gg/KSjg3W7T4t`,
+  DiscordServer: `https://discord.gg/KSjg3W7T4t`,
+  VoteURL: `https://discord.gg/KSjg3W7T4t`,
+  Website: `https://discord.gg/KSjg3W7T4t`,
+};
+
+const options = {
+  embedFooter: true,
+  nowplayingMsg: true,
+  defaultVolume: 100,
+  leaveTimeout: 300000,
+};
+
+const numberEmojis = [
+  `0️⃣`,
+  `1️⃣`,
+  `2️⃣`,
+  `3️⃣`,
+  `4️⃣`,
+  `5️⃣`,
+  `6️⃣`,
+  `7️⃣`,
+  `8️⃣`,
+  `9️⃣`,
+  `🔟`,
+];
+
+const slashSettings = {
+  global: true,
+  guildIDS: ["1315622630690390050"],
+};
+
+module.exports = {
+  ...defaultSettings,
+  embed: embedSettings,
+  emoji: emojiSettings,
+  filters,
+  links,
+  options,
+  numberEmojis,
+  slash: slashSettings,
+};
